@@ -1,10 +1,10 @@
 import os, time, sys
 from socket import * 
-myHost = '' 
-myPort = 50007 
+myHost = '0.0.0.0' 
+myPort = 2222 
 sockobj = socket(AF_INET, SOCK_STREAM) 
 sockobj.bind((myHost, myPort)) 
-sockobj.listen(5)
+sockobj.listen(1)
 
 activeChildren = []
 def reapChildren(): 
