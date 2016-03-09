@@ -19,8 +19,8 @@ def handleClient(connection):
         if data=='close': break 
         reply = 'Echo=>%s at %s' % (data, now())
         connection.send(reply.encode())
- connection.close()
- os._exit(0)
+    connection.close()
+    os._exit(0)
 def dispatcher(): 
     while True: 
         connection, address = sockobj.accept() 
